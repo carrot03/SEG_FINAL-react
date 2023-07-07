@@ -1,0 +1,10 @@
+.hero-image {
+    width: 300%;
+    margin-top: -12rem;
+}
+
+.alert-custom {
+    width: fit-content;
+    margin: 1% 5% auto;
+    border: 1px solid #cccccc;
+  }

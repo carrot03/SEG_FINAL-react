@@ -1,0 +1,33 @@
+.NavBar{
+    color:transparent;
+}
+
+
+.logo {
+    width: 20rem; /* Adjust the width and height as per your logo dimensions */
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Customize the link color */
+.navbar a.nav-link {
+    color: #000000; /* Set the desired color */
+    font-size: 1.5rem;
+  }
+  
+  /* Add hover effect to the links */
+  .navbar a.nav-link:hover {
+    color: #bd2023; /* Set the desired color on hover */
+  }
+  
+  /* Customize the active link */
+  .navbar a.nav-link.active {
+    font-weight: bold; /* Set the desired font weight */
+ }
+
+  
+  
+  
+  

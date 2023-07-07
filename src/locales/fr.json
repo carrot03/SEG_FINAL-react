@@ -1,0 +1,16 @@
+{
+    "greeting": "Bonjour !",
+    "buttonText": "Changer de langue",
+
+    "NavBar-about": "A Propos",
+    "NavBar-virtualtable": "Table virtuelle",
+    "NavBar-contactus": "Contactez nous",
+    "NavBar-vlogs": "Vlogues",
+    "NavBar-menu": "Menu",
+    "NavBar-reviews": "Critiques",
+    
+
+    "crodeness-alert-content": "Le café est bondé en ce moment !",
+    "crodeness-alert-header": "Salut, ravi de te voir"
+  }
+  

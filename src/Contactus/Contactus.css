@@ -1,0 +1,27 @@
+div.contactus{
+    width: 90%;
+    margin: auto;
+}
+
+div.contactus_header p {
+    font-size: xx-large;
+    font-style: normal;
+}
+
+.image {
+    width: 50%;
+}
+
+div.contactus-container {
+    margin: 2% 8% auto;
+    font: normal;
+}
+
+div.chatbox {
+    margin: 4% 2% auto; 
+     
+}
+
+div.chatbox-container {
+    background-color: blanchedalmond;   
+}

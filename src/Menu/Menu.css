@@ -1,0 +1,10 @@
+div.menu {
+    width: 90%;
+    margin: auto;
+}
+
+
+div.menu_header p {
+    font-size: xx-large;
+    font-style: normal;
+}
