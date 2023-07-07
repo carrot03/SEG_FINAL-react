@@ -9,7 +9,7 @@ import './NavBar.css';
 
 function Logo() {
     const logoStyle = {
-        backgroundImage: `url('http://www.blessroll.com/images/common/bless_logo_bl2.png')`,
+        backgroundImage: `url('https://www.blessroll.com/images/common/bless_logo_bl2.png')`,
       };
     
       return <div className="logo" href="#hero" style={logoStyle}></div>;
