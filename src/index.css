@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Hero-parallax {
+  position: relative;
+  height: 50rem;
+}
+
+.Hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20% auto;
+}

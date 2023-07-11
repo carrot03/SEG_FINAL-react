@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Parallax} from 'react-parallax';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
 import Menu from '../Menu/Menu.js';
@@ -20,9 +21,7 @@ function Hero() {
   };
 
   return (
-    <div>
-      
-      <div className="hero-container">
+   
         <div
           className="iframe-container"
           style={{
@@ -35,7 +34,6 @@ function Hero() {
             marginTop: '1.6em',
             marginBottom: '0.9em',
             overflow: 'hidden',
-            borderRadius: '8px',
             willChange: 'transform',
             
           }}
@@ -65,13 +63,7 @@ function Hero() {
             Design
           </a>
         </div>
-      </div>
-
-      <div className="next-section">
-       
-      </div>
-    </div>
-    
+      
   );
 }
 

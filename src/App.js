@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { I18nextProvider } from 'react-i18next';
+import {Parallax} from 'react-parallax';
 import i18n from './i18n';
 import NavBar from "./NavBar/NavBar.js";
-import Hero from "./Hero/Hero.js";
+import HeroParallax from "./Hero/HeroParallax.js";
 import Menu from "./Menu/Menu.js";
 import Review from "./Reviews/Review.js";
 import Contactus from "./Contactus/Contactus";
@@ -22,8 +23,8 @@ function App() {
 	<>
     	<I18nextProvider i18n={i18n}></I18nextProvider>
     	<NavBar />
-		<Hero/>
-		{<Menu/>}
+		<HeroParallax/>
+		<Menu/>
 		<Review/>
 		<Contactus/>
 		
