@@ -17,6 +17,7 @@ import './Menu.css';
 function Menu() {
 
   const [item, setItem] = useState('');
+ 
 
   const build_categorical_facet_values = (name) => {
     const values = [...new Set(data.map(item => item[name]))]
@@ -33,12 +34,12 @@ function Menu() {
     all_menu: data,
     shown_menu: data,
     shown_table_menu: [],
+    allergy_items: [],
     facets: {
       category: build_categorical_facet_values('category'),
       allergy: build_categorical_facet_values('allergy')
     }
   })
-
 
   //Updates state.shown_menu whenever state.facets changes
   useEffect(() => {
@@ -64,13 +65,33 @@ function Menu() {
 
     // Double loop through all menu and all active facets
     // Keep only the items that match the active facets
-    const to_show = state.all_menu.map(menuItem =>
+     const to_show_all = state.all_menu.map(menuItem =>
       Object.entries(facets).map(([name, values]) =>
         values.includes(menuItem[name])).filter(Boolean).length === number_of_active_facets ? menuItem : undefined
-    ).filter(Boolean)
+    ).filter(Boolean); 
+    
+    //saving the to_show in shown_menu
+    setState({ ...state, shown_menu: to_show_all })
 
+  // Check if any allergy facet is chosen
+  const chosenAllergies = state.facets.allergy.filter(allergy => allergy.checked);
+  if (chosenAllergies.length > 0) {
+
+    const matchingItems = state.shown_menu.filter(menuItem => {
+      // Check if any allergy of the item matches the chosen allergies
+      return chosenAllergies.every(allergy => menuItem.allergy.includes(allergy.name));
+    });
+
+    console.log(matchingItems.length);
+
+    // editing shown_menu list
+    const to_show = state.shown_menu.filter(MenuItem => !matchingItems.includes(MenuItem));
     setState({ ...state, shown_menu: to_show })
+    }; 
+
   }, [state.facets])
+
+  
 
   function clearAllFacetValues(facet) {
     const new_facet = state.facets[facet].map(facet_value => ({
@@ -81,9 +102,13 @@ function Menu() {
 
   // Function to pass down to the Facet_value component to modify the state in this component.
   function updateCategory(facet, value, newChecked) {
+    
     const new_facet = state.facets[facet].map(({ name, checked }) => ({ name: name, checked: name === value ? newChecked : checked }))
     setState({ ...state, facets: { ...state.facets, [facet]: new_facet } })
+
   }
+
+
 
   // function to pass down to the MenuItem component and add the items to the table
   function updateTable(itemId){
@@ -94,8 +119,6 @@ function Menu() {
     setState({ ...state, shown_table_menu: specificMenuItem ? [...state.shown_table_menu, specificMenuItem] : [] });
     
   }
-
-
 
   return (
     <div id="menu" className='menu'>

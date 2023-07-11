@@ -21,11 +21,12 @@ function App() {
 	return (
 	<>
     	<I18nextProvider i18n={i18n}></I18nextProvider>
-    	<NavBar/>
+    	<NavBar />
 		<Hero/>
-		<Menu />
+		{<Menu/>}
 		<Review/>
 		<Contactus/>
+		
 	</>
 	);
 }

@@ -1,15 +1,16 @@
-.NavBar{
-    color:transparent;
+
+
+.bg-body-tertiary {
+  color:transparent;
+  width: 100%;
+  margin-bottom: -1.8rem;
+  padding-left: 1rem;
 }
 
-
-.logo {
-    width: 20rem; /* Adjust the width and height as per your logo dimensions */
-    height: 90px;
-    background-size: cover;
-    background-position: center;
+.custom-brand {
+  width: 30%;
+  margin-right:2em;
 }
-
 
 /* Customize the link color */
 .navbar a.nav-link {
@@ -25,6 +26,7 @@
   /* Customize the active link */
   .navbar a.nav-link.active {
     font-weight: bold; /* Set the desired font weight */
+    color: #bd2023; /* Set the desired color on hover */
  }
 
   

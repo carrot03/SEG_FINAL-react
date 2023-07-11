@@ -4,16 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useTranslation } from 'react-i18next'; // Import the useTranslation hook 
+import { useTranslation } from 'react-i18next';
 import './NavBar.css';
-
-function Logo() {
-    const logoStyle = {
-        backgroundImage: `url('https://www.blessroll.com/images/common/bless_logo_bl2.png')`,
-      };
-    
-      return <div className="logo" href="#hero" style={logoStyle}></div>;
-  }
 
 function NavBar() {
   const { i18n } = useTranslation();
@@ -24,15 +16,9 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-
-        <Navbar.Brand href="#home">
-            <Logo/>
-        </Navbar.Brand>
-
+    <Navbar expand="lg" className="bg-body-tertiary" variant="dark" fluid>
+      <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#about">{t('NavBar-about')}</Nav.Link>
