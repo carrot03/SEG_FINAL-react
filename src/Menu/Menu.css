@@ -1,10 +1,27 @@
+@font-face {
+    font-family: jelleeRoman;
+    src: url(../fonts/jellee.roman.ttf) format("truetype");
+}
+
+.menu_header h1{
+    font-family: jelleeRoman;
+    font-size: 6rem;
+    color: darkseagreen;
+    margin: 0% 40% auto;
+}
 div.menu {
-    width: 90%;
-    margin: auto;
+    width: 100%;
 }
 
 
 div.menu_header p {
     font-size: xx-large;
     font-style: normal;
+}
+
+.table_header h1{
+    font-family: jelleeRoman;
+    font-size: 6rem;
+    color: darkseagreen;
+    margin: 2% 23% 0% 23%;
 }

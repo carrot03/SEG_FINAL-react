@@ -3,6 +3,11 @@
   
 }
 
+@font-face {
+  font-family: jelleeRoman;
+  src: url(./fonts/jellee.roman.ttf) format("truetype");
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

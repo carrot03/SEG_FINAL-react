@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import {Col, Row} from 'react-bootstrap/esm';
 import './Review.css';
+import {reviews_data} from "./Reviews.js"
 import { Container } from 'react-bootstrap';
+import ReviewItem from './ReviewsItem';
 
 
 function Review() {
     const [inputValue, setInputValue] = useState('');
     const [notification, setNotification] = useState('');
+    const [reviews, setReviews] = useState(reviews_data);
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
@@ -25,28 +28,17 @@ function Review() {
         <div id='reviews' className='reviews'>
             
             <div className='review_header'>
-                <h1> Reviews </h1>
+                <h1> What our clients said </h1>
                 <hr></hr>
             </div>
           <div>
-            
+            {reviews.map((item) => (
+               <ReviewItem
+                 title={item.title}
+                 description={item.description}
+               />
+             ))}
                 
-
-                <div className='box'>
-                    <h1>Review from Selena</h1>
-                    <p>"I absolutely love this cafe! Their drinks are so refreshing, and their cakes are incredibly delicious. The cozy atmosphere and 
-                    friendly staff make it a perfect spot to relax and enjoy a sweet treat."</p>
-                    <hr></hr>
-                    <div>
-                        <textarea className='inputReview'
-                            value={inputValue}
-                            onChange={handleInputChange}
-                            placeholder="Enter your review"
-                        />
-                        <button onClick={handleClearInput}>Submit review</button>
-                        {notification && <p className="notification">{notification}</p>}
-                    </div>
-                </div>
 
             </div>
         </div>

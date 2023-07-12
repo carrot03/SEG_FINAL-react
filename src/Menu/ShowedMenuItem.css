@@ -1,0 +1,14 @@
+.img-container {
+    padding: 0;
+    border-radius: 50px;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.description p{
+    font-weight: bold;
+}

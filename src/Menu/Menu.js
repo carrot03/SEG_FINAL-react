@@ -11,6 +11,8 @@ import {Button} from 'react-bootstrap';
 import Facets_container from './Facets_container';
 import MenuItem from './MenuItem';
 import ShowedMenuItem from './ShowedMenuItem';
+import { Parallax } from 'react-parallax';
+import backgroundimg from '../images/break3.jpg';
 import './Menu.css';
 
 
@@ -24,17 +26,13 @@ function Menu() {
     return values.map(value => ({ 'name': value, 'checked': false }))
   }
 
-  const build_allergical_facet_values = (name) => {
-    const values = [...new Set(allergies.map(item => item[name]))]
-    return values.map(value => ({'name' : value, 'checked': false }))
-  }
 
   // Initial state
   const [state, setState] = useState({
     all_menu: data,
     shown_menu: data,
-    shown_table_menu: [],
     allergy_items: [],
+    shown_table_menu: [],
     facets: {
       category: build_categorical_facet_values('category'),
       allergy: build_categorical_facet_values('allergy')
@@ -70,11 +68,17 @@ function Menu() {
         values.includes(menuItem[name])).filter(Boolean).length === number_of_active_facets ? menuItem : undefined
     ).filter(Boolean); 
     
+    // looping through the allergy facet and then delete the found items from the list
+    
+
+
     //saving the to_show in shown_menu
     setState({ ...state, shown_menu: to_show_all })
-
+      console.log('everything:', state.shown_menu);
+      
   // Check if any allergy facet is chosen
   const chosenAllergies = state.facets.allergy.filter(allergy => allergy.checked);
+  
   if (chosenAllergies.length > 0) {
 
     const matchingItems = state.shown_menu.filter(menuItem => {
@@ -82,11 +86,15 @@ function Menu() {
       return chosenAllergies.every(allergy => menuItem.allergy.includes(allergy.name));
     });
 
-    console.log(matchingItems.length);
+    console.log("allergies",matchingItems.length);
+    console.log("shown menu before deleteting",state.shown_menu.length);
+
 
     // editing shown_menu list
     const to_show = state.shown_menu.filter(MenuItem => !matchingItems.includes(MenuItem));
+    
     setState({ ...state, shown_menu: to_show })
+    console.log("shown menu after deleteting",state.shown_menu.length);
     }; 
 
   }, [state.facets])
@@ -109,16 +117,29 @@ function Menu() {
   }
 
 
+  // table component
+  const [isTableEmpty, setIsTableEmpty] = useState(true);
 
   // function to pass down to the MenuItem component and add the items to the table
   function updateTable(itemId){
+    console.log(itemId);
     setItem(itemId); // Update the item state with the clicked item ID
-
-    const specificMenuItem = state.all_menu.find(menuItem => menuItem.id === item);
+    setState()
+    const specificMenuItem = state.shown_menu.find(menuItem => menuItem.id === item);
   
-    setState({ ...state, shown_table_menu: specificMenuItem ? [...state.shown_table_menu, specificMenuItem] : [] });
+    setState([ ...state.shown_table_menu, specificMenuItem]);
+    setIsTableEmpty(false);
+    //setState({ ...state, shown_table_menu: specificMenuItem ? [...state.shown_table_menu, specificMenuItem] : [] });
     
   }
+
+  /*function removeFromTable(itemId){
+    setItem(itemId);
+    const updatedTableItems = shown_table_menu.filter((menuItem) => menuItem.id !== item);
+    setState({...shown_table_menu, updatedTableItems});
+    setIsTableEmpty(updatedTableItems.length === 0); // Update isTableEmpty when an item is removed
+  }*/
+
 
   return (
     <div id="menu" className='menu'>
@@ -137,6 +158,7 @@ function Menu() {
               <MenuItem
                 key={item.id} 
                 name={item.name}
+                image={item.image}
                 price={item.price}
                 description={item.description}
                 ingredients={item.ingredients}
@@ -148,29 +170,44 @@ function Menu() {
           </Container>
         </Col>
       </Row>
+
       <div id='virtualtable' className='virtualtable'>
-          <div className='menu_header'>
+          <div className='table_header'>
             <h1>Your virtual table</h1>
             <hr></hr>
           </div>
           <div className='table'>
               <p>Selected Item ID: {item}</p>
               <Col>
-                  <Container className='d-flex flex-wrap'>
-                  {state.shown_table_menu.map((item) => (
-                    <ShowedMenuItem
-                      key={item.id} 
-                      name={item.name}
-                      price={item.price}
-                      description={item.description}
-                      ingredients={item.ingredients}
-                      category={item.category}
-                    />
-                  ))}
-                </Container>
+                  {isTableEmpty ? (
+                    <p>Your cart is empty. Start adding items!</p>
+                  ) : (
+                    /* Render the table items */
+                    <Container className='d-flex flex-wrap'>
+                      {state.shown_table_menu.map((item) => (
+                        <ShowedMenuItem
+                          key={item.id} 
+                          name={item.name}
+                          image={item.image}
+                          price={item.price}
+                          description={item.description}
+                          ingredients={item.ingredients}
+                          category={item.category}
+                        />
+                      ))}
+                    </Container>
+                  )}
+                  
             </Col>
           </div>
       </div>
+
+      <Parallax className="Menu-parallax" bgImage={backgroundimg} bgImageAlt="oops! I guess we missed an image here..." strength={100} height='10rem'>
+              <div className='Menu-break-content'>
+                <p>We are waiting for you!</p>
+              </div>
+      </Parallax>
+     
       
     </div>
     

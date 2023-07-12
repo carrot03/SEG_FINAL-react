@@ -1,16 +1,26 @@
+@font-face {
+    font-family: jelleeRoman;
+    src: url(../fonts/jellee.roman.ttf) format("truetype");
+}
 
 div.reviews {
     width: 90%;
     margin: auto;
+    background-image: '../images/review-background.jpg';
 }
 div.review_header {
     width: 90%;
 }
 
-
+.review_header h1 {
+    font-family: jelleeRoman;
+    font-size: 6rem;
+    color: darkseagreen;
+    margin: 0% 0% auto;
+}
 
 .box {
-    background-color: #885151;
+    
     padding: 10px;
     border: 3px solid #964e4e;
     border-radius: 15px;
