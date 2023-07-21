@@ -5,11 +5,13 @@
 
 div.reviews {
     width: 90%;
-    margin: auto;
+    margin: 2% auto;
     background-image: '../images/review-background.jpg';
+
 }
 div.review_header {
     width: 90%;
+    position: center;
 }
 
 .review_header h1 {
@@ -27,11 +29,17 @@ div.review_header {
     width: 50%;
 }
 
+.userReview {
+    width: 30rem;
+    margin-left: 30%;
+    margin-top: 2rem;
+}
+
 .inputReview {
 
-    background-color: #c89999;
+    background-color: #ffff;
     width: 100%;
-    height: 5rem;
+    height: 10em;
 }
 
 .notification {
@@ -43,3 +51,6 @@ div.review_header {
     font-size: 1.5rem;
 }
 
+.addReview {
+    align-items: center;
+}

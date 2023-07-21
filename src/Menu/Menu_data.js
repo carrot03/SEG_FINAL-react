@@ -6,7 +6,7 @@ export const data = [
       "description": "Light and fluffy roll cake filled with fresh strawberries.",
       "price": "10,000 KRW",
       "category": "Cake",
-      "allergy": "Diary",
+      "allergy": "Peanuts",
       "ingredients": ["Flour", "Sugar", "Eggs", "Strawberries"]
     },
     {  "id":2,
@@ -15,7 +15,7 @@ export const data = [
       "description": "Delicious Orio cake with a creamy filling.",
       "price": "12,000 KRW",
       "category": "Cake",
-      "allergy": "Diary",
+      "allergy": "Peanuts",
       "ingredients": ["Flour", "Sugar", "Eggs", "Orio", "Cream"]
     },
     {
@@ -25,7 +25,7 @@ export const data = [
       "description": "Decadent Creamy vanilla roll cake with rich vanilla cream glase.",
       "price": "11,000 KRW",
       "category": "Cake",
-      "allergy": "Diary",
+      "allergy": "Peanuts",
       "ingredients": ["Flour", "Sugar", "Eggs", "Vanilla", "Cream"]
     },
 
@@ -36,7 +36,7 @@ export const data = [
       "description": "Delicious cherry roll with a creamy filling with cherry pieces.",
       "price": "4,500 KRW",
       "category": "Roll",
-      "allergy": "Diary",
+      "allergy": "Peanuts",
       "ingredients":  ["Flour", "Sugar", "Eggs", "Cherry", "Cream"]
     },
     {
@@ -46,7 +46,7 @@ export const data = [
       "description": "Delicious chocolate roll with a creamy filling with chocolate pieces.",
       "price": "6,000 KRW",
       "category": "Roll",
-      "allergy": "Diary",
+      "allergy": "Peanuts",
       "ingredients": ["Flour", "Sugar", "Eggs", "chocolate", "Cream"]
     },
     {
@@ -56,7 +56,7 @@ export const data = [
       "description": "Delicious classic roll with a creamy filling.",
       "price": "7,000 KRW",
       "category": "Roll",
-      "allergy": "Diary & food coloring",
+      "allergy": "Peanuts",
       "ingredients": ["Flour", "Sugar", "Eggs", "food coloring", "Cream"]
     },
     {
@@ -66,7 +66,7 @@ export const data = [
       "description": "Delicious Icecream covered in peanuts.",
       "price": "7,000 KRW",
       "category": "Icecream",
-      "allergy": "Peanuts",
+      "allergy": "Diary",
       "ingredients": ["Sugar", "peanut", "Cream"]
     },
     {
@@ -76,7 +76,7 @@ export const data = [
       "description": "Delicious Icecream covered in mango powder.",
       "price": "7,000 KRW",
       "category": "Icecream",
-      "allergy": "Mango",
+      "allergy": "Peanuts",
       "ingredients": ["Sugar", "mango", "Cream"]
     },
     {
@@ -86,7 +86,7 @@ export const data = [
       "description": "Delicious Icecream covered in Orio powder.",
       "price": "7,000 KRW",
       "category": "Icecream",
-      "allergy": "none",
+      "allergy": "Peanuts",
       "ingredients": ["Sugar", "orio", "Cream"]
     },
     {
@@ -96,8 +96,7 @@ export const data = [
       "description": "Delicious classic vanilla Icecream.",
       "price": "7,000 KRW",
       "category": "Icecream",
-      "allergy": "none",
+      "allergy": "Peanuts",
       "ingredients": ["Sugar", "vanilla", "Cream"]
     }
-
 ]

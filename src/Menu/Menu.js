@@ -13,6 +13,7 @@ import MenuItem from './MenuItem';
 import ShowedMenuItem from './ShowedMenuItem';
 import { Parallax } from 'react-parallax';
 import backgroundimg from '../images/break3.jpg';
+import { RiInbox2Fill } from 'react-icons/ri';
 import './Menu.css';
 
 
@@ -63,43 +64,23 @@ function Menu() {
 
     // Double loop through all menu and all active facets
     // Keep only the items that match the active facets
-     const to_show_all = state.all_menu.map(menuItem =>
+     const to_show = state.all_menu.map(menuItem =>
       Object.entries(facets).map(([name, values]) =>
         values.includes(menuItem[name])).filter(Boolean).length === number_of_active_facets ? menuItem : undefined
     ).filter(Boolean); 
     
-    // looping through the allergy facet and then delete the found items from the list
     
-
-
-    //saving the to_show in shown_menu
-    setState({ ...state, shown_menu: to_show_all })
-      console.log('everything:', state.shown_menu);
+     //saving the to_show in shown_menu
+     setState({ ...state, shown_menu: to_show })
+     console.log("everything:"+state.shown_menu);
       
-  // Check if any allergy facet is chosen
-  const chosenAllergies = state.facets.allergy.filter(allergy => allergy.checked);
-  
-  if (chosenAllergies.length > 0) {
+     if(state.shown_menu.length === 0){
+      
+      <p>{RiInbox2Fill}gfvvvvvvvvvvvvvvvvvvvv</p>
+      
+     }
 
-    const matchingItems = state.shown_menu.filter(menuItem => {
-      // Check if any allergy of the item matches the chosen allergies
-      return chosenAllergies.every(allergy => menuItem.allergy.includes(allergy.name));
-    });
-
-    console.log("allergies",matchingItems.length);
-    console.log("shown menu before deleteting",state.shown_menu.length);
-
-
-    // editing shown_menu list
-    const to_show = state.shown_menu.filter(MenuItem => !matchingItems.includes(MenuItem));
-    
-    setState({ ...state, shown_menu: to_show })
-    console.log("shown menu after deleteting",state.shown_menu.length);
-    }; 
-
-  }, [state.facets])
-
-  
+    }, [state.facets])//end of use effect
 
   function clearAllFacetValues(facet) {
     const new_facet = state.facets[facet].map(facet_value => ({
@@ -132,13 +113,6 @@ function Menu() {
     //setState({ ...state, shown_table_menu: specificMenuItem ? [...state.shown_table_menu, specificMenuItem] : [] });
     
   }
-
-  /*function removeFromTable(itemId){
-    setItem(itemId);
-    const updatedTableItems = shown_table_menu.filter((menuItem) => menuItem.id !== item);
-    setState({...shown_table_menu, updatedTableItems});
-    setIsTableEmpty(updatedTableItems.length === 0); // Update isTableEmpty when an item is removed
-  }*/
 
 
   return (
