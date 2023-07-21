@@ -16,20 +16,19 @@ function NavBar() {
     i18n.changeLanguage(lng);
   };
 
-  
-
   return (
     <Navbar expand="lg" className="bg-body-tertiary" variant="dark" fixed='top'>
       <Container fluid>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+        
           <Nav className="me-auto">
               <Link to="/about" className="nav-link">{t('NavBar-about')}</Link>
               <Link to="/menu" className="nav-link">{t('NavBar-menu')}</Link>
               <Link to="/contactus" className="nav-link">{t('NavBar-contactus')}</Link>
               <Link to="/reviews" className="nav-link">{t('NavBar-reviews')}</Link>
           </Nav>
-          
+       
           <Nav>
             <NavDropdown className='drop-down-lang' title="Language" id="basic-nav-dropdown">
               <NavDropdown.Item onClick={() => changeLanguage('en')}>English</NavDropdown.Item>

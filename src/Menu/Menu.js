@@ -36,7 +36,7 @@ function Menu() {
     shown_table_menu: [],
     facets: {
       category: build_categorical_facet_values('category'),
-      allergy: build_categorical_facet_values('allergy')
+      allergy: build_categorical_facet_values('allergy'),
     }
   })
 

@@ -4,7 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
 import Menu from '../Menu/Menu.js';
 import NavBar from "../NavBar/NavBar.js";
+import Container from 'react-bootstrap/esm/Container';
+import Row from 'react-bootstrap/esm/Row';
+import Col from 'react-bootstrap/esm/Col';
 import './Hero.css';
+import outside from '../images/outside.jpg'
+import break1 from '../images/break1.jpg'
+import HeroParallax from './HeroParallax.js';
 
 function Hero() {
   const { i18n } = useTranslation();
@@ -21,49 +27,39 @@ function Hero() {
   };
 
   return (
-   
-        <div
-          id='Hero'
-          className="iframe-container"
-          style={{
-            position: 'relative',
-            width: '100%',
-            height: 0,
-            paddingTop: '56.2225%',
-            paddingBottom: 0,
-            boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)',
-            marginTop: '1.6em',
-            marginBottom: '0.9em',
-            overflow: 'hidden',
-            willChange: 'transform',
-            
-          }}
-        >
-          <iframe
-            title="Embedded Design"
-            loading="lazy"
-            style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              top: 0,
-              left: 0,
-              border: 'none',
-              padding: 0,
-              margin: 0,
-            }}
-            src="https://www.canva.com/design/DAFn9ujCHeA/view?embed"
-            allowFullScreen
-            allow="fullscreen"
-          ></iframe>
-          <a
-            href="https://www.canva.com/design/DAFn9ujCHeA/view?utm_content=DAFn9ujCHeA&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Design
-          </a>
+    <div>
+      <HeroParallax/>
+      <div className="container mt-5">
+      <div className="row">
+        {/* Left column - Paragraph */}
+        <div className="col-md-6">
+          <p>
+            Bless Roll cafe, is the go-to place if you want to enjoy colourful and amazing desserts as well as drinks. 
+            The owner is a mother and her daughter Zoe helps her and promotes the cafe.
+            This place started very small and now we are one of the biggest cafes in South Korea.
+            Please visit us, we will be more happy to meet and serve you.
+          </p>
+          <div style={{ marginTop: '5rem'}}>
+          <img
+            src={break1}
+            alt="Blessroll"
+            className="img-fluid"
+          />
+          </div>
+          
         </div>
+
+        {/* Right column - Image */}
+        <div className="col-md-6">
+          <img
+            src={outside}
+            alt="Blessroll"
+            className="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+   </div>
       
   );
 }

@@ -1,35 +1,32 @@
+/* Remove the transparent text color */
 .bg-body-tertiary {
-  color:transparent;
   width: 100%;
   padding-left: 1rem;
 }
 
-.custom-brand {
-  width: 30%;
-  margin-right:2em;
-}
-
 .navbar-expand-lg .navbar-nav {
   flex-direction: row;
+  width: 100%;
 }
 
 /* Customize the link color */
 .navbar a.nav-link {
-    color: #000000; /* Set the desired color */
-    font-size: 1.5rem;
-  }
-  
-  /* Add hover effect to the links */
-  .navbar a.nav-link:hover {
-    color: #bd2023; /* Set the desired color on hover */
-  }
-  
-  /* Customize the active link */
-  .navbar a.nav-link.active {
-    font-weight: bold; /* Set the desired font weight */
-    color: #bd2023; /* Set the desired color on hover */
- }
+  color: #000000; /* Set the desired color */
+  font-size: 1.5rem;
+}
 
- .navbar a.nav-link.show {
+/* Add hover effect to the links */
+.navbar a.nav-link:hover {
   color: #bd2023; /* Set the desired color on hover */
- }
+}
+
+/* Customize the active link */
+.navbar a.nav-link.active {
+  font-weight: bold; /* Set the desired font weight */
+  color: #bd2023; /* Set the desired color on hover */
+}
+
+.navbar a.nav-link.show {
+  color: #bd2023; /* Set the desired color on hover */
+}
+
