@@ -10,7 +10,43 @@
     "NavBar-reviews": "Reviews",
 
     "crodeness-alert-content": "The cafe is crowded at the moment!",
-    "crodeness-alert-header": "Hey, nice to see you"
+    "crodeness-alert-header": "Hey, nice to see you",
+
+    "review-header": "What our clients said",
+
+    "title1": "Selena said",
+    "description1": "I absolutely love this cafe! Their drinks are so refreshing, and their cakes are incredibly delicious. The cozy atmosphere and  friendly staff make it a perfect spot to relax and enjoy a sweet treat.",
+    "rating1": 5,
     
+    "title2": "Catrina said",
+    "description2": "All I can say is that this hidden gem is a must-visit for coffee aficionados and anyone looking for a serene escape in the bustling city. I'll definitely be returning to explore more of their delightful offerings! ☕️🍰",
+    "rating2": 4,
+  
+    "title3": "Fifi said",
+    "description3": "The baristas here are skilled professionals who take pride in their craft. I tried their house blend, and it was a well-balanced cup, perfect for a midday pick-me-up.",
+    "rating3": 4,
+      
+    "review-fail": "Umm.. We are missing your review. Please write down your review first, Thank you!",
+    "review-success": "Review submitted!",
+
+    "review-placeholder": "Enter your review",
+
+    "add-rating": "Add Rating?",
+
+    "review-submit-btn": "Submit review",
+
+    "contactus-header": "contact Us",
+
+    "q1":"Do you have any vegetarian/vegan/gluten-free options?",
+    "q2":"Are you open today?",
+    "q3":"What types of coffee do you offer?",
+    "q4":"How can I book a table?",
+
+    "a1":"Yes, we offer vegetarian, vegan, and gluten-free options. Our menu has a variety of dishes to cater to different dietary preferences.",
+    "a2":"Yes! we are waiting for you",
+    "a3":"We have a variety of coffee options, including classics like cappuccino and latte, as well as specialty brews like pour-over and cold brew.",
+    "a4":"For booking a table or any specific concerns please give us a call or send an email. We will be happy to respond and have you with us.",
+    "a-d":"Please select an option."
+
   }
   

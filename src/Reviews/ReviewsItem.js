@@ -7,7 +7,7 @@ import './ReviewItem.css';
 
 function ReviewItem({ title, description, rating }) {
 
-
+  
   const ratingValue = parseInt(rating, 10)
 
   const stars = Array(5).fill(0);
@@ -15,7 +15,7 @@ function ReviewItem({ title, description, rating }) {
     orange: "#FFBA5A",
     grey: "#a9a9a9",
   };
-
+  
   return (
     <Card className="m-2" style={{ width: '25rem' }}>
       
@@ -23,6 +23,7 @@ function ReviewItem({ title, description, rating }) {
 
         <Card.Title className='title'>
           {title}
+          
         </Card.Title>
 
         <Card.Text>

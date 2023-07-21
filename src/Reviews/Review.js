@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import {Col, Row} from 'react-bootstrap/esm';
 import './Review.css';
-import {reviews_data} from "./Reviews.js"
 import { Container } from 'react-bootstrap';
 import {AiOutlineComment} from 'react-icons/ai';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import "react-notifications/lib/notifications.css";
 import { Rating } from 'react-simple-star-rating';
 import Button from 'react-bootstrap/Button';
+import { useTranslation } from 'react-i18next';
 import ReviewItem from './ReviewsItem';
 
 
@@ -15,10 +15,26 @@ import ReviewItem from './ReviewsItem';
 
 function Review() {
     const [inputValue, setInputValue] = useState('');
-    const [reviews, setReviews] = useState(reviews_data);
-    const [rating, setRating] = useState(0)
+    const [rating, setRating] = useState(0);
+    const { t } = useTranslation();
 
-
+    const reviews = [
+        {
+          "title": t('title1'),
+          "description": t('description1'),
+          "rating": 5
+        },
+        {
+          "title": t('title2'),
+          "description": t('description2'),
+          "rating": 4
+        },
+        {
+          "title": t('title3'),
+          "description": t('description3'),
+          "rating": 4
+        }
+      ];
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
@@ -28,11 +44,11 @@ function Review() {
         setInputValue('');
 
         if (inputValue.length===0 && rating===0){
-            NotificationManager.error("Umm.. We are missing your review. Please write down your review first, Thank you!", "", 4000);
+            NotificationManager.error(t('review-fail'), "", 4000);
 
         }
         else {
-            NotificationManager.success("Review submitted!", "", 4000);
+            NotificationManager.success(t('review-success'), "", 4000);
         }
     };
 
@@ -58,7 +74,7 @@ function Review() {
         <div id='reviews' className='reviews'>
             <NotificationContainer/>
             <div className='review_header'>
-                <h1> What our clients said <AiOutlineComment/></h1>
+                <h1> {t('review-header')} <AiOutlineComment/></h1>
                 <hr></hr>
             </div>
 
@@ -82,10 +98,10 @@ function Review() {
                     <textarea className='inputReview'
                         value={inputValue}
                         onChange={handleInputChange}
-                        placeholder="Enter your review"
+                        placeholder={t('review-placeholder')}
                     />
                 </Container>
-                <p>Add Rating?</p>
+                <p>{t('add-rating')}</p>
                 <div>
                     <Rating
                        onClick={handleRating}
@@ -96,7 +112,7 @@ function Review() {
                     />
                 </div>
 
-                <Button variant="outline-primary" className='submitBtn' onClick={handleClearInput}>Submit review </Button>
+                <button className='submitBtn' onClick={handleClearInput}>{t('review-submit-btn')} </button>
                 
             </div>
         

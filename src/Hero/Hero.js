@@ -23,6 +23,7 @@ function Hero() {
   return (
    
         <div
+          id='Hero'
           className="iframe-container"
           style={{
             position: 'relative',

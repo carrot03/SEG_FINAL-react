@@ -1,71 +1,84 @@
 import React, { useState } from 'react';
 import { Col, Row, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import break1 from '../images/break1.jpg';
+import { useTranslation } from 'react-i18next';
+import {AiFillPhone} from 'react-icons/ai';
+import {MdEmail} from 'react-icons/md';
+import {BsFillChatRightTextFill} from 'react-icons/bs';
 import './Contactus.css';
 
 function Contactus() {
   const [selectedOption, setSelectedOption] = useState('please choose a question from the provided list');
   const [showedMessage, setshowedMessage] = useState('');
+  const { t } = useTranslation();
 
 
   const handleDropdownChange = (event) => {
     const selectedValue = event.target.textContent;
     setSelectedOption(selectedValue);
 
-    if (selectedValue === 'Do you have any vegetarian/vegan/gluten-free options?') {
-      setshowedMessage('Yes, we offer vegetarian, vegan, and gluten-free options. Our menu has a variety of dishes to cater to different dietary preferences.');
-    } else if (selectedValue === 'Are you open today?') {
-      setshowedMessage('Yes! we are waiting for you');
-    } else if (selectedValue === 'What types of coffee do you offer?') {
-      setshowedMessage('We have a variety of coffee options, including classics like cappuccino and latte, as well as specialty brews like pour-over and cold brew.');
-    } else if (selectedValue === 'How can I book a table?') {
-      setshowedMessage('For booking a table or any specific concerns please give us a call or send an email. We will be happy to respond and have you with us.');
+    if (selectedValue === t('q1')) {
+      setshowedMessage(t('a1'));
+    } else if (selectedValue === t('q2')) {
+      setshowedMessage(t('a2'));
+    } else if (selectedValue === t('q3')) {
+      setshowedMessage(t('a3'));
+    } else if (selectedValue === t('q4')) {
+      setshowedMessage(t('a4'));
     }else {
-      setshowedMessage('Please select an option.');
+      setshowedMessage(t('a-d'));
     }
   };
 
   return (
-    <div className='contactus' id='contactus'>
+    <div className='contactus' id='Contactus'>
       <div className='contactus_header'>
-        <h1> Contact us </h1>
-        <hr />
+      <div className='contactus-header'>
+        <h1> {t('contactus-header')} </h1>
+        <hr></hr>
+      </div>
       </div>
       <Row>
         <Col>
           <div className='contactus-container'>
-            <p>Call us on 111-222-444</p>
-            <p>Email us at blessroll@blessroll.com</p>
-            <p>Or chat with our virtual assistant to help you</p>
+           
+            <p><AiFillPhone/>Call us on 111-222-444</p>
+            <p><MdEmail/>Email us at blessroll@blessroll.com</p>
+            <p>Or <BsFillChatRightTextFill/> chat with our virtual assistant to help you in the following chatbox:</p>
+            <p>Tip: Choose a question from the dropdown list.</p>
             <div className='chatbox-container'>
-            <div className='chatbox'>
-            <Dropdown>
-                <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                  {selectedOption}
-                </Dropdown.Toggle>
+           
+                
+                <Dropdown>
+                    <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                      {selectedOption}
+                    </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                  <Dropdown.Item value="Option 1" onClick={handleDropdownChange}>
-                  Do you have any vegetarian/vegan/gluten-free options?
-                  </Dropdown.Item>
-                  <Dropdown.Item value="Option 2" onClick={handleDropdownChange}>
-                    Are you open today?
-                  </Dropdown.Item>
-                  <Dropdown.Item value="Option 3" onClick={handleDropdownChange}>
-                  What types of coffee do you offer?
-                  </Dropdown.Item>
-                  <Dropdown.Item value="Option 4" onClick={handleDropdownChange}>
-                  How can I book a table?
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-            <p>Employee: {showedMessage}</p>
-            </div>
+                    <Dropdown.Menu>
+                      <Dropdown.Item value="Option 1" onClick={handleDropdownChange}>
+                      {t('q1')}
+                      </Dropdown.Item>
+                      <Dropdown.Item value="Option 2" onClick={handleDropdownChange}>
+                      {t('q2')}
+                      </Dropdown.Item>
+                      <Dropdown.Item value="Option 3" onClick={handleDropdownChange}>
+                      {t('q3')}
+                      </Dropdown.Item>
+                      <Dropdown.Item value="Option 4" onClick={handleDropdownChange}>
+                      {t('q4')}
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                
+                <div className='chatbox'>
+                <p>Employee: {showedMessage}</p>
+                </div>
           </div>
           </div>
         </Col>
         <Col>
-          <img className='image' src='./images/icecream2.jpg' alt='Bless Roll'></img>
+          <img className='image' src={break1} alt='Bless Roll'></img>
         </Col>
       </Row>
     </div>

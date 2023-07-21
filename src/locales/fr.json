@@ -11,6 +11,42 @@
     
 
     "crodeness-alert-content": "Le café est bondé en ce moment !",
-    "crodeness-alert-header": "Salut, ravi de te voir"
+    "crodeness-alert-header": "Salut, ravi de te voir",
+
+    "review-header": "Ce que nos clients ont dit",
+
+    "title1": "Selena a dit",
+    "description1": "J'adore absolument ce café ! Leurs boissons sont rafraîchissantes et leurs gâteaux sont incroyablement délicieux. L'ambiance chaleureuse et le personnel amical en font l'endroit idéal pour se détendre et savourer une douceur.",
+    "rating1": 5,
+
+    "title2": "Catrina a dit",
+    "description2": "Tout ce que je peux dire, c'est que ce joyau caché est un incontournable pour les amateurs de café et toute personne à la recherche d'une évasion sereine dans la ville animée. Je reviendrai certainement pour découvrir davantage de leurs délices ! ☕️🍰",
+    "rating2": 4,
+
+    "title3": "Fifi a dit",
+    "description3": "Les baristas ici sont des professionnels qualifiés qui sont fiers de leur métier. J'ai essayé leur mélange maison, et c'était une tasse bien équilibrée, parfaite pour un petit coup de pouce en milieu de journée.",
+    "rating3": 4,
+        
+    "review-fail": "Umm .. Votre avis nous manque. Veuillez d'abord écrire votre avis, merci!",
+    "review-success": "Avis soumis!",
+
+    "review-placeholder": "Entrez votre avis",
+
+    "add-rating": "Ajouter une note?",
+
+    "review-submit-btn": "Poster l'avis",
+
+    "contactus-header": "contactez-Nous",
+
+    "q1":"Avez-vous des options végétariennes/végétaliennes/sans gluten?",
+     "q2":"Êtes-vous ouvert aujourd'hui?",
+     "q3":"Quels types de café proposez-vous?",
+     "q4":"Comment puis-je réserver une table?",
+    
+     "a1":"Oui, nous proposons des options végétariennes, végétaliennes et sans gluten. Notre menu propose une variété de plats pour répondre à différentes préférences alimentaires.",
+     "a2":"Oui ! nous vous attendons",
+     "a3":"Nous avons une variété d'options de café, y compris des classiques comme le cappuccino et le latte, ainsi que des infusions spéciales comme le pour-over et l'infusion froide.",
+     "a4":"Pour réserver une table ou pour toute question spécifique, veuillez nous appeler ou envoyer un e-mail. Nous serons heureux de vous répondre et de vous avoir avec nous.",
+     "a-d":"Veuillez sélectionner une option."
   }
   

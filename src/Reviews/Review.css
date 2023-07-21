@@ -5,12 +5,12 @@
 
 div.reviews {
     width: 90%;
-    margin: 2% auto;
+    margin: 7% auto;
     background-image: '../images/review-background.jpg';
 
 }
 div.review_header {
-    width: 90%;
+    width: 100%;
     position: center;
 }
 
@@ -18,7 +18,7 @@ div.review_header {
     font-family: jelleeRoman;
     font-size: 6rem;
     color: darkseagreen;
-    margin: 0% 0% auto;
+  
 }
 
 .box {
@@ -42,15 +42,23 @@ div.review_header {
     height: 10em;
 }
 
-.notification {
-    margin: 2% 0% auto;
-    background-color: green;
-    width: fit-content;
-    border-radius: 5%;
-    position: absolute;
-    font-size: 1.5rem;
-}
-
 .addReview {
     align-items: center;
 }
+
+/* styles.css (or any other CSS file where you define your styles) */
+.submitBtn {
+    background-color: rgb(9, 100, 9);
+    color:#ffff;
+    font-weight: 700; /* Use the appropriate font weight value, e.g., 700 for bold */
+    height: 2em;
+    width: 10em;
+  }
+  
+  .submitBtn:hover,
+  .submitBtn:active {
+    background-color: darkseagreen;
+    color: #000;
+    font-weight: 700; /* Use the appropriate font weight value, e.g., 700 for bold */
+  }
+  
