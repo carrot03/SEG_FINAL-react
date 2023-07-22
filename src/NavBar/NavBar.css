@@ -1,4 +1,11 @@
-/* Remove the transparent text color */
+.navbar-brand {
+  padding-left: 4rem;
+}
+
+.nav-logo {
+  width: 50%;
+}
+
 .bg-body-tertiary {
   width: 100%;
   padding-left: 1rem;
@@ -6,7 +13,7 @@
 
 .navbar-expand-lg .navbar-nav {
   flex-direction: row;
-  width: 100%;
+  gap: 1rem;
 }
 
 /* Customize the link color */
