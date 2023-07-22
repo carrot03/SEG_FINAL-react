@@ -18,4 +18,8 @@
   .iframe-container{
     z-index: 0;
   }
+
+  .text {
+    padding: 8%;
+  }
   

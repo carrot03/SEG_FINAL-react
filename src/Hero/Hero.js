@@ -32,21 +32,10 @@ function Hero() {
       <div className="container mt-5">
       <div className="row">
         {/* Left column - Paragraph */}
-        <div className="col-md-6">
-          <p>
-            Bless Roll cafe, is the go-to place if you want to enjoy colourful and amazing desserts as well as drinks. 
-            The owner is a mother and her daughter Zoe helps her and promotes the cafe.
-            This place started very small and now we are one of the biggest cafes in South Korea.
-            Please visit us, we will be more happy to meet and serve you.
-          </p>
-          <div style={{ marginTop: '5rem'}}>
-          <img
-            src={break1}
-            alt="Blessroll"
-            className="img-fluid"
-          />
-          </div>
-          
+        <div className="text col-md-6 text-center">
+          <p>{t('hero-first-text')}</p>
+          <p>{t('hero-main-text')}</p>
+          <p>{t('hero-second-text')} </p>
         </div>
 
         {/* Right column - Image */}
