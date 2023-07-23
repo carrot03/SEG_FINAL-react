@@ -36,6 +36,7 @@ function Hero() {
           <p>{t('hero-first-text')}</p>
           <p>{t('hero-main-text')}</p>
           <p>{t('hero-second-text')} </p>
+          <p>{t('hero-third-text')}</p>
         </div>
 
         {/* Right column - Image */}
