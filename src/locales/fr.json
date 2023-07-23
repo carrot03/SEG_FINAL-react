@@ -37,6 +37,12 @@
     "review-submit-btn": "Poster l'avis",
 
     "contactus-header": "contactez-Nous",
+    "contactus-call": "Appelez-nous au",
+    "contactus-email": "Ecrivez-nous à",
+    "contactus-or": "Ou",
+    "contactus-chat": "Discutez avec notre assistant virtuel pour vous aider dans la chatbox suivante",
+    "contactus-tip": "Conseil : Choisissez une question dans la liste déroulante.",
+    "contactus-assistant": "Assistant",
 
     "q1":"Avez-vous des options végétariennes/végétaliennes/sans gluten?",
      "q2":"Êtes-vous ouvert aujourd'hui?",
@@ -47,6 +53,64 @@
      "a2":"Oui ! nous vous attendons",
      "a3":"Nous avons une variété d'options de café, y compris des classiques comme le cappuccino et le latte, ainsi que des infusions spéciales comme le pour-over et l'infusion froide.",
      "a4":"Pour réserver une table ou pour toute question spécifique, veuillez nous appeler ou envoyer un e-mail. Nous serons heureux de vous répondre et de vous avoir avec nous.",
-     "a-d":"Veuillez sélectionner une option."
+     "a-d":"Veuillez sélectionner une option.",
+
+     "footer-rights-reserved": "Tous les droits sont réservés",
+     "9am": " De 9h",
+     "1am": "à 1h",
+     "footer-openhours":"Heures d'ouverture",
+     "footer-all-week": "Tous les jours de la semaine",
+
+     "hero-main-text": "Le café Bless Roll est l'endroit idéal si vous souhaitez déguster des desserts colorés et étonnants ainsi que des boissons. La propriétaire est une mère et sa fille Zoe l'aide et fait la promotion du café. Cet endroit a commencé très petit et maintenant nous sommes l'un des plus grands cafés de Corée du Sud. Veuillez nous rendre visite, nous serons plus heureux de vous rencontrer et de vous servir.",
+      "hero-first-text": "Bless Roll est le café des desserts haut de gamme.",
+      "hero-second-text":"Dans notre café, vous pouvez trouver du café chaud et froid, de délicieuses glaces et des gâteaux.",
+
+      "menu-name-1": "Gâteau classique aux fraises",
+      "menu-name-2":"Gâteau Orio classique",
+      "menu-name-3": "Gâteau crémeux à la vanille",
+      "menu-name-4": "Cherry roll",
+      "menu-name-5": "Pain roulé au chocolat",
+      "menu-name-6": "Rouleaux de coeurs",
+      "menu-name-7": "Glace aux cacahuètes",
+      "menu-name-8": "Glace à la mangue",
+      "menu-name-9": "Glace Orio",
+      "menu-name-10": "Glace à la vanille",
+
+      "menu-category-roll": "Rouler",
+      "menu-category-icecream":"Glace",
+      "menu-category-cake": "Gâteau",
+
+      "menu-contains-strawberries": "Fraises",
+      "menu-contains-orio": "Orio",
+      "menu-contains-Vanilla": "Vanille",
+      "menu-contains-Cherry": "Cherry",
+      "menu-contains-Chocolate": "Chocolat",
+      "menu-contains-Food-coloring": "Colorant alimentaire",
+      "menu-contains-Peanuts": "Cacahuètes",
+      "menu-contains-Mango": "Mangue",
+
+      "menu-description-1": "Gâteau roulé léger et moelleux fourré de fraises fraîches.",
+      "menu-description-2": "Délicieux gâteau Orio avec une garniture crémeuse.",
+      "menu-description-3": "Gâteau roulé à la vanille crémeux décadent avec un riche glaçage à la crème à la vanille.",
+      "menu-description-4": "Délicieux roulé aux cerises avec une garniture crémeuse aux morceaux de cerises.",
+      "menu-description-5": "Délicieux pain au chocolat avec une garniture crémeuse avec des morceaux de chocolat.",
+      "menu-description-6": "Délicieux petit pain classique avec une garniture crémeuse.",
+      "menu-description-7": "Délicieuse glace recouverte de cacahuètes.",
+      "menu-description-8": "Délicieuse glace recouverte de poudre de mangue.",
+      "menu-description-9": "Délicieuse glace recouverte de poudre d'Orio.",
+      "menu-description-10": "Délicieuse glace à la vanille classique.",
+
+      "Flour": "Farine",
+      "Sugar": "Sucre",
+      "Eggs": "Œufs",
+      "Vanilla": "Vanille",
+      "Cream": "Crème",
+      "Oreo": "Oréo",
+      "Mango": "Mangue",
+      "Peanuts": "Arachides",
+      "Food coloring": "Colorant alimentaire",
+      "Chocolate": "Chocolat",
+      "Cherry": "Cerise",
+      "Strawberries": "Fraises"
   }
   

@@ -1,9 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
-import { data } from "./Menu_data.js";
-import { allergies } from "./allergies.js";
-import menu_data from './Menu_data.json';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
@@ -14,34 +10,142 @@ import ShowedMenuItem from './ShowedMenuItem';
 import { Parallax } from 'react-parallax';
 import backgroundimg from '../images/break3.jpg';
 import { RiInbox2Fill } from 'react-icons/ri';
+import { useTranslation } from 'react-i18next';
 import './Menu.css';
 
 
 function Menu() {
+
+  const { t } = useTranslation();
+
+  const data = [
+    {
+      "id":1,
+      "name": t('menu-name-1'),
+      "image": "https://i.ibb.co/frMyJ4p/pink-cake.jpg",
+      "description": t('menu-description-1'),
+      "price": "10,000 KRW",
+      "category": t('menu-category-cake'),
+      "contains": t('menu-contains-strawberries'),
+      "ingredients": [t('Flour'), t('Sugar'), t('Eggs'), t('Strawberries')]
+    },
+    {  "id":2,
+      "name": t('menu-name-2'),
+      "image": "https://i.ibb.co/cy52zyb/oreo-cake.jpg",
+      "description": t('menu-description-2'),
+      "price": "12,000 KRW",
+      "category": t('menu-category-cake'),
+      "contains": t('menu-contains-orio'),
+      "ingredients": [t('Flour'), t('Sugar'), t('Eggs'), t('Orio'), t('Cream')]
+    },
+    {
+      "id":3,
+      "name": t('menu-name-3'),
+      "image": "https://i.ibb.co/BzWcmjj/white-cake.jpg",
+      "description": t('menu-description-3'),
+      "price": "11,000 KRW",
+      "category": t('menu-category-cake'),
+      "contains": t('menu-contains-Vanilla'),
+      "ingredients": [t('Flour'), t('Sugar'), t('Eggs'), t('Vanilla'), t('Cream')]
+    },
+  
+    {
+      "id":4,
+      "name": t('menu-name-4'),
+      "image": "https://i.ibb.co/k9D1MpL/cherry-roll.jpg",
+      "description": t('menu-description-4'),
+      "price": "4,500 KRW",
+      "category": t('menu-category-roll'),
+      "contains": t('menu-contains-Cherry'),
+      "ingredients":  [t('Flour'), t('Sugar'), t('Eggs'), t('Cherry'), t('Cream')]
+    },
+    {
+      "id":5,
+      "name": t('menu-name-5'),
+      "image": "https://i.ibb.co/D7z5JYP/cow-roll.jpg",
+      "description": t('menu-description-5'),
+      "price": "6,000 KRW",
+      "category": t('menu-category-roll'),
+      "contains": t('menu-contains-Chocolate'),
+      "ingredients": [t('Flour'), t('Sugar'), t('Eggs'), t('Chocolate'), t('Cream')]
+    },
+    {
+      "id":6,
+      "name": t('menu-name-6'),
+      "image": "https://i.ibb.co/DgR2P8Q/heart-roll.jpg",
+      "description": t('menu-description-6'),
+      "price": "7,000 KRW",
+      "category": t('menu-category-roll'),
+      "contains": t('menu-contains-Food-coloring'),
+      "ingredients": [t('Flour'), t('Sugar'), t('Eggs'), t('Food coloring'), t('Cream')]
+    },
+    {
+      "id":7,
+      "name": t("menu-name-7"),
+      "image": "https://i.ibb.co/h9pLYrw/peanut-icecream.jpg",
+      "description": t('menu-description-7'),
+      "price": "7,000 KRW",
+      "category": t('menu-category-icecream'),
+      "contains": t('menu-contains-Peanuts'),
+      "ingredients": [t('Sugar'), t('Peanuts'), t('Cream')]
+    },
+    {
+      "id":8,
+      "name": t('menu-name-8'),
+      "image": "https://i.ibb.co/n7nwWK9/mango-icecream.jpg",
+      "description": t('menu-description-8'),
+      "price": "7,000 KRW",
+      "category": t('menu-category-icecream'),
+      "contains": t('menu-contains-Mango'),
+      "ingredients": [t('Sugar'), t('Mango'), t('Cream')]
+    },
+    {
+      "id":9,
+      "name": t('menu-name-9'),
+      "image": "https://i.ibb.co/cN2qdkx/oreo-icecream.jpg",
+      "description": t('menu-description-9'),
+      "price": "7,000 KRW",
+      "category": t('menu-category-icecream'),
+      "contains": t('menu-contains-orio'),
+      "ingredients": [t('Sugar'), t('orio'), t('Cream')]
+    },
+    {
+      "id":10,
+      "name": t('menu-name-10'),
+      "image": "https://i.ibb.co/pf9WFJj/vanilla-icecream.jpg",
+      "description": t('menu-description-10'),
+      "price": "7,000 KRW",
+      "category": t('menu-category-icecream'),
+      "contains": t('menu-contains-Vanilla'),
+      "ingredients": [t('Sugar'), t('Vanilla'), t('Cream')]
+    }
+  ]
 
   const [item, setItem] = useState('');
  
 
   const build_categorical_facet_values = (name) => {
     const values = [...new Set(data.map(item => item[name]))]
-    return values.map(value => ({ 'name': value, 'checked': false }))
-  }
+    return values.map(value => ({ 'name': value, 'checked': false }));
+  }  
 
 
   // Initial state
   const [state, setState] = useState({
     all_menu: data,
     shown_menu: data,
-    allergy_items: [],
     shown_table_menu: [],
     facets: {
       category: build_categorical_facet_values('category'),
-      allergy: build_categorical_facet_values('allergy'),
+      contains: build_categorical_facet_values('contains'),
     }
   })
 
   //Updates state.shown_menu whenever state.facets changes
   useEffect(() => {
+
+    console.log("menu-name-1:", t('menu-name-1'));
+    console.log(data);
     const facets = {}
     // Get all the facet values that are true/active/selected.
     Object.entries(state.facets).forEach(([name, values]) => {
@@ -80,7 +184,7 @@ function Menu() {
       
      }
 
-    }, [state.facets])//end of use effect
+    }, [state.facets, t])//end of use effect
 
   function clearAllFacetValues(facet) {
     const new_facet = state.facets[facet].map(facet_value => ({
@@ -158,17 +262,20 @@ function Menu() {
                   ) : (
                     /* Render the table items */
                     <Container className='d-flex flex-wrap'>
-                      {state.shown_table_menu.map((item) => (
-                        <ShowedMenuItem
-                          key={item.id} 
-                          name={item.name}
-                          image={item.image}
-                          price={item.price}
-                          description={item.description}
-                          ingredients={item.ingredients}
-                          category={item.category}
-                        />
-                      ))}
+                      {state.shown_menu.map((item) => (
+                          <MenuItem
+                            key={item.id}
+                            name={item.name}
+                            image={item.image}
+                            price={item.price}
+                            description={item.description}
+                            ingredients={item.ingredients}
+                            category={item.category}
+                            updateTable={updateTable} // Pass the function
+                            itemId={item.id} // Pass the item ID
+                          />
+                        ))
+                      }
                     </Container>
                   )}
                   

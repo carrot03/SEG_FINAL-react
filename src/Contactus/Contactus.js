@@ -43,10 +43,10 @@ function Contactus() {
         <Col>
           <div className='contactus-container'>
            
-            <p><AiFillPhone/>Call us on 111-222-444</p>
-            <p><MdEmail/>Email us at blessroll@blessroll.com</p>
-            <p>Or <BsFillChatRightTextFill/> chat with our virtual assistant to help you in the following chatbox:</p>
-            <p>Tip: Choose a question from the dropdown list.</p>
+            <p> <AiFillPhone/> {t('contactus-call')} +82 50-71412-0692</p>
+            <p> <MdEmail/> {t('contactus-email')}  blessroll@naver.com</p>
+            <p> <BsFillChatRightTextFill/> {t('contactus-or')} {t('contactus-chat')} :</p>
+            <p>{t('contactus-tip')}</p>
             <div className='chatbox-container'>
            
                 
@@ -72,7 +72,7 @@ function Contactus() {
                 </Dropdown>
                 
                 <div className='chatbox'>
-                <p>Employee: {showedMessage}</p>
+                <p>{t('contactus-assistant')} : {showedMessage}</p>
                 </div>
           </div>
           </div>

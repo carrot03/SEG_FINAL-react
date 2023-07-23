@@ -36,6 +36,12 @@
     "review-submit-btn": "Submit review",
 
     "contactus-header": "contact Us",
+    "contactus-call": "Call us on",
+    "contactus-email": "Email us at",
+    "contactus-or": "Or",
+    "contactus-chat": "Chat with our virtual assistant to help you in the following chatbox",
+    "contactus-tip": "Tip: Choose a question from the dropdown list.",
+    "contactus-assistant": "Assistant",
 
     "q1":"Do you have any vegetarian/vegan/gluten-free options?",
     "q2":"Are you open today?",
@@ -46,7 +52,67 @@
     "a2":"Yes! we are waiting for you",
     "a3":"We have a variety of coffee options, including classics like cappuccino and latte, as well as specialty brews like pour-over and cold brew.",
     "a4":"For booking a table or any specific concerns please give us a call or send an email. We will be happy to respond and have you with us.",
-    "a-d":"Please select an option."
+    "a-d":"Please select an option.",
+
+    "footer-rights-reserved": "All rights reserved",
+     "9am": "From 9AM",
+     "1am":"to 1AM",
+     "footer-openhours":"Open Hours",
+     "footer-all-week": "All week days",
+
+     "hero-main-text": "Bless Roll cafe, is the go-to place if you want to enjoy colourful and amazing desserts as well as drinks.  The owner is a mother and her daughter Zoe helps her and promotes the cafe. This place started very small and now we are one of the biggest cafes in South Korea. Please visit us, we will be more happy to meet and serve you.",
+     "hero-first-text": "Bless Roll is the premium dessert café.",
+     "hero-second-text":"At our café, you can find hot and cold coffee, delecious icecream and cakes.",
+     
+
+     "menu-name-1": "Classic Strawberry Cake",
+     "menu-name-2":"Classic Orio cake",
+     "menu-name-3": "Creamy vanilla cake",
+     "menu-name-4": "Cherry roll",
+     "menu-name-5": "Chocolate roll",
+     "menu-name-6": "Hearts Roll",
+     "menu-name-7": "Peanut icecream",
+     "menu-name-8": "Mango icecream",
+     "menu-name-9": "Orio icecream",
+     "menu-name-10": "Vanilla icecream",
+
+     "menu-category-roll": "Roll",
+     "menu-category-icecream":"Icecream",
+     "menu-category-cake": "Cake",
+
+     "menu-contains-strawberries": "Strawberries",
+     "menu-contains-orio": "Orio",
+     "menu-contains-Vanilla": "Vanilla",
+     "menu-contains-Cherry": "Cherry",
+     "menu-contains-Chocolate": "Chocolate",
+     "menu-contains-Food-coloring": "Food coloring",
+     "menu-contains-Peanuts": "Peanuts",
+     "menu-contains-Mango": "Mango",
+
+     "menu-description-1": "Light and fluffy roll cake filled with fresh strawberries.",
+     "menu-description-2": "Delicious Orio cake with a creamy filling.",
+     "menu-description-3": "Decadent Creamy vanilla roll cake with rich vanilla cream glase.",
+     "menu-description-4": "Delicious cherry roll with a creamy filling with cherry pieces.",
+     "menu-description-5": "Delicious chocolate roll with a creamy filling with chocolate pieces.",
+     "menu-description-6": "Delicious classic roll with a creamy filling.",
+     "menu-description-7": "Delicious Icecream covered in peanuts.",
+     "menu-description-8": "Delicious Icecream covered in mango powder.",
+     "menu-description-9": "Delicious Icecream covered in Orio powder.",
+     "menu-description-10": "Delicious classic vanilla Icecream.",
+
+     "Flour": "Flour ",
+     "Sugar": "Sugar ",
+     "Eggs": "Eggs ",
+     "Vanilla": "Vanilla ",
+     "Cream": "Cream ",
+     "Orio": "orio",
+     "Mango": "Mango",
+     "Peanuts": "Peanuts",
+     "Food coloring": "Food coloring",
+     "Chocolate": "Chocolate",
+     "Cherry": "Cherry",
+     "Strawberries": "Strawberries"
+
 
   }
   
