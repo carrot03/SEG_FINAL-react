@@ -249,39 +249,7 @@ function Menu() {
         </Col>
       </Row>
 
-      <div id='virtualtable' className='virtualtable'>
-          <div className='table_header'>
-            <h1>Your virtual table</h1>
-            <hr></hr>
-          </div>
-          <div className='table'>
-              <p>Selected Item ID: {item}</p>
-              <Col>
-                  {isTableEmpty ? (
-                    <p>Your cart is empty. Start adding items!</p>
-                  ) : (
-                    /* Render the table items */
-                    <Container className='d-flex flex-wrap'>
-                      {state.shown_menu.map((item) => (
-                          <MenuItem
-                            key={item.id}
-                            name={item.name}
-                            image={item.image}
-                            price={item.price}
-                            description={item.description}
-                            ingredients={item.ingredients}
-                            category={item.category}
-                            updateTable={updateTable} // Pass the function
-                            itemId={item.id} // Pass the item ID
-                          />
-                        ))
-                      }
-                    </Container>
-                  )}
-                  
-            </Col>
-          </div>
-      </div>
+      
 
       <Parallax className="Menu-parallax" bgImage={backgroundimg} bgImageAlt="oops! I guess we missed an image here..." strength={100} height='10rem'>
               <div className='Menu-break-content'>

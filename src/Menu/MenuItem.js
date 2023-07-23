@@ -27,11 +27,7 @@ function MenuItem({ image, name, price, description, ingredients, updateTable, i
             <Col className='description'> <p>Ingredients:</p> {ingredients}</Col>
             </Row>
           </Card.Text>
-          <Container className="text-center">
-            <Button onClick={() => updateTable(itemId)}>
-              Add
-            </Button>
-          </Container>
+          
         </Card.Body>
       </Card>
     );

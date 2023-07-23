@@ -25,6 +25,7 @@ function Footer() {
           <div className="col text-right" style={{padding: "0rem 0rem 0rem 10rem" }}>
             <p>{t('footer-openhours')}:</p>
             <p>{t('footer-all-week')} : {t('9am')}  {t('1am')}</p>
+            <p>Location: South Korea, Daejeon, Yuseong-gu, Bongmyeong-dong, 668-2 1</p>
           </div>
         </div>
       </div>

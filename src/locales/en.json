@@ -50,7 +50,7 @@
 
     "a1":"Yes, we offer vegetarian, vegan, and gluten-free options. Our menu has a variety of dishes to cater to different dietary preferences.",
     "a2":"Yes! we are waiting for you",
-    "a3":"We have a variety of coffee options, including classics like cappuccino and latte, as well as specialty brews like pour-over and cold brew.",
+    "a3":"We have a variety of coffee options, including classics like cappuccino and latte, as well as specialty brews like pour-over and cold brew. Most of them are not in the menu of our website, please contact us if you would like to learn more",
     "a4":"For booking a table or any specific concerns please give us a call or send an email. We will be happy to respond and have you with us.",
     "a-d":"Please select an option.",
 
@@ -105,13 +105,13 @@
      "Eggs": "Eggs ",
      "Vanilla": "Vanilla ",
      "Cream": "Cream ",
-     "Orio": "orio",
-     "Mango": "Mango",
-     "Peanuts": "Peanuts",
+     "Orio": "orio ",
+     "Mango": "Mango ",
+     "Peanuts": "Peanuts ",
      "Food coloring": "Food coloring",
-     "Chocolate": "Chocolate",
-     "Cherry": "Cherry",
-     "Strawberries": "Strawberries"
+     "Chocolate": "Chocolate ",
+     "Cherry": "Cherry ",
+     "Strawberries": "Strawberries "
 
 
   }
