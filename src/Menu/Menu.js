@@ -130,7 +130,7 @@ function Menu() {
   }  
 
 
-  // Initial state
+  // m Initial state
   const [state, setState] = useState({
     all_menu: data,
     shown_menu: data,
