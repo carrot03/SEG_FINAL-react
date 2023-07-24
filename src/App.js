@@ -1,3 +1,4 @@
+// App.js
 import { useEffect, useState } from "react";
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
@@ -9,25 +10,25 @@ import Menu from "./Menu/Menu.js";
 import Review from "./Reviews/Review.js";
 import Footer from './Footer/Footer';
 import Contactus from "./Contactus/Contactus";
+import NotFound from "./NotFound/NotFound"; // Import the NotFound component
 import './App.css';
 
-
 const App = () => {
-
-	return (
-	<Router basename="/SEG_FINAL-react">
-    	<I18nextProvider i18n={i18n}></I18nextProvider>
-    	<NavBar />
-		<Routes>
-		<Route exact path="/" element={<Hero/>} />
-		<Route exact path="/about" element={<Hero/>} />
-		<Route path="/menu"  element={<Menu/>} />
-		<Route path="/reviews"  element={<Review/>} />
-		<Route path="/Contactus"  element={<Contactus/>} />
-		</Routes>
-		<Footer/>
-	</Router>
-	);
+  return (
+    <Router basename="/SEG_FINAL-react">
+      <I18nextProvider i18n={i18n}></I18nextProvider>
+      <NavBar />
+      <Routes>
+        <Route exact path="/" element={<Hero />} />
+        <Route exact path="/about" element={<Hero />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reviews" element={<Review />} />
+        <Route path="/contactus" element={<Contactus />} />
+        <Route path="*" element={<NotFound />} /> {/* This is the catch-all route */}
+      </Routes>
+      <Footer />
+    </Router>
+  );
 };
 
 export default App;
